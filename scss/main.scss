@@ -1,0 +1,59 @@
+@import 'modules/fonts';
+body {
+    background: #58d7d1;
+    .head {
+        padding: 0;
+        .corner {
+            background: url(../img/acrobata.png);
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+            height: 30vh;
+            padding: 0;
+            &.left-corner {
+                background-position: left;
+            }
+            &.right-corner {
+                background-position: right;
+                transform: scaleX(-1);
+            }
+        }
+        .title {
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            height: 30vh;
+            line-height: 30vh;
+            text-align: center;
+            color: #2697a9;
+            text-shadow: -2px 0px white;
+            font-size: 5vw;
+            .star {
+                background: url(../img/star.svg);
+                background-position: center;
+                background-size: contain;
+                background-repeat: no-repeat;
+                height: 10vh;
+                width: 10vh;
+                position: relative;
+                display: inline-block;
+            }
+            F1 {
+                font-family: 'Frontage', sans-serif;
+            }
+            F2 {
+                font-size: 10vw;
+                font-family: 'Sensations', serif;
+                text-decoration: underline;
+                padding-bottom: 0;
+                text-decoration-color: white;
+            }
+        }
+    }
+    .body {
+        background: url(../img/bg.svg);
+        height: 10000vh;
+        background-size: contain;
+        padding: 0;
+    }
+}
