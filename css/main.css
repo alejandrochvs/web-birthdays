@@ -4,23 +4,31 @@
 @font-face {
   font-family: 'Sensations';
   src: url("../fonts/Sensations and Qualities.ttf"); }
-body {
-  background: #58d7d1; }
-  body .head {
-    padding: 0; }
-    body .head .corner {
+html {
+  background: white; }
+
+body .section {
+  padding: 0; }
+  body .section .head {
+    padding: 0;
+    -webkit-box-shadow: 0px 0px 12px 1px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0px 0px 12px 1px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 0px 12px 1px rgba(0, 0, 0, 0.3);
+    z-index: 3;
+    background: #58d7d1; }
+    body .section .head .corner {
       background: url(../img/acrobata.png);
       background-position: center;
       background-size: contain;
       background-repeat: no-repeat;
       height: 30vh;
       padding: 0; }
-      body .head .corner.left-corner {
+      body .section .head .corner.left-corner {
         background-position: left; }
-      body .head .corner.right-corner {
+      body .section .head .corner.right-corner {
         background-position: right;
         transform: scaleX(-1); }
-    body .head .title {
+    body .section .head .title {
       white-space: nowrap;
       text-overflow: ellipsis;
       overflow: hidden;
@@ -30,7 +38,7 @@ body {
       color: #2697a9;
       text-shadow: -2px 0px white;
       font-size: 5vw; }
-      body .head .title .star {
+      body .section .head .title .star {
         background: url(../img/star.svg);
         background-position: center;
         background-size: contain;
@@ -39,18 +47,86 @@ body {
         width: 10vh;
         position: relative;
         display: inline-block; }
-      body .head .title F1 {
+      body .section .head .title F1 {
         font-family: 'Frontage', sans-serif; }
-      body .head .title F2 {
+      body .section .head .title F2 {
         font-size: 10vw;
         font-family: 'Sensations', serif;
         text-decoration: underline;
         padding-bottom: 0;
         text-decoration-color: white; }
-  body .body {
+  body .section .body {
     background: url(../img/bg.svg);
-    height: 10000vh;
+    min-height: 70vh;
     background-size: contain;
-    padding: 0; }
+    padding: 0;
+    padding-bottom: 5vh;
+    background: #58d7d1;
+    z-index: 2;
+    -webkit-box-shadow: 0px 0px 12px 1px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0px 0px 12px 1px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 0px 12px 1px rgba(0, 0, 0, 0.3); }
+    body .section .body h2 {
+      color: white;
+      font-family: 'Sensations', serif;
+      font-size: 5vw; }
+    body .section .body .person {
+      cursor: pointer;
+      transition: all .3s ease;
+      color: #58d7d1;
+      line-height: 7.5vh;
+      background: white;
+      margin-bottom: 1vh;
+      border-radius: 5px;
+      -webkit-box-shadow: 0px 0px 12px 1px rgba(0, 0, 0, 0);
+      -moz-box-shadow: 0px 0px 12px 1px rgba(0, 0, 0, 0);
+      box-shadow: 0px 0px 12px 1px rgba(0, 0, 0, 0); }
+      body .section .body .person .name {
+        font-size: 20px; }
+      body .section .body .person .date {
+        font-size: 22px;
+        text-align: right; }
+      body .section .body .person:hover {
+        transform: scaleY(1.1) scaleX(1.025);
+        -webkit-box-shadow: 0px 0px 12px 1px rgba(0, 0, 0, 0.3);
+        -moz-box-shadow: 0px 0px 12px 1px rgba(0, 0, 0, 0.3);
+        box-shadow: 0px 0px 12px 1px rgba(0, 0, 0, 0.3); }
+  body .section .flag {
+    z-index: 0;
+    display: block;
+    position: absolute;
+    bottom: 0vh;
+    background: transparent;
+    left: 0;
+    width: 8.33333vw;
+    border-left: solid 3vw transparent;
+    border-right: solid 3vw #77deda;
+    border-bottom: solid 3vw #77deda;
+    border-top: solid 3vw transparent; }
+    body .section .flag.right-flag {
+      right: 0;
+      left: inherit;
+      border-left: solid 3vw #77deda;
+      border-right: solid 3vw transparent;
+      border-bottom: solid 3vw #77deda;
+      border-top: solid 3vw transparent; }
+body .footer {
+  min-height: 20vh;
+  background: #96e6e2;
+  z-index: 2;
+  -webkit-box-shadow: 0px 0px 12px 1px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 0px 12px 1px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 12px 1px rgba(0, 0, 0, 0.3); }
+  body .footer .footer-logo {
+    background: url(../img/Logo-03.png);
+    background-size: contain;
+    height: 80%;
+    width: 35%;
+    left: 32.5%;
+    top: 10%;
+    position: absolute;
+    background-repeat: no-repeat;
+    transition: all .3s ease;
+    background-position: center; }
 
 /*# sourceMappingURL=main.css.map */

@@ -1,59 +1,150 @@
 @import 'modules/fonts';
+$blue: #58d7d1;
+html {
+    background: white;
+}
+
 body {
-    background: #58d7d1;
-    .head {
+    .section {
         padding: 0;
-        .corner {
-            background: url(../img/acrobata.png);
-            background-position: center;
-            background-size: contain;
-            background-repeat: no-repeat;
-            height: 30vh;
+        .head {
             padding: 0;
-            &.left-corner {
-                background-position: left;
-            }
-            &.right-corner {
-                background-position: right;
-                transform: scaleX(-1);
-            }
-        }
-        .title {
-            white-space: nowrap;
-            text-overflow: ellipsis;
-            overflow: hidden;
-            height: 30vh;
-            line-height: 30vh;
-            text-align: center;
-            color: #2697a9;
-            text-shadow: -2px 0px white;
-            font-size: 5vw;
-            .star {
-                background: url(../img/star.svg);
+            -webkit-box-shadow: 0px 0px 12px 1px rgba(0, 0, 0, 0.3);
+            -moz-box-shadow: 0px 0px 12px 1px rgba(0, 0, 0, 0.3);
+            box-shadow: 0px 0px 12px 1px rgba(0, 0, 0, 0.3);
+            z-index: 3;
+            background: $blue;
+            .corner {
+                background: url(../img/acrobata.png);
                 background-position: center;
                 background-size: contain;
                 background-repeat: no-repeat;
-                height: 10vh;
-                width: 10vh;
-                position: relative;
-                display: inline-block;
+                height: 30vh;
+                padding: 0;
+                &.left-corner {
+                    background-position: left;
+                }
+                &.right-corner {
+                    background-position: right;
+                    transform: scaleX(-1);
+                }
             }
-            F1 {
-                font-family: 'Frontage', sans-serif;
+            .title {
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                height: 30vh;
+                line-height: 30vh;
+                text-align: center;
+                color: #2697a9;
+                text-shadow: -2px 0px white;
+                font-size: 5vw;
+                .star {
+                    background: url(../img/star.svg);
+                    background-position: center;
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    height: 10vh;
+                    width: 10vh;
+                    position: relative;
+                    display: inline-block;
+                }
+                F1 {
+                    font-family: 'Frontage', sans-serif;
+                }
+                F2 {
+                    font-size: 10vw;
+                    font-family: 'Sensations', serif;
+                    text-decoration: underline;
+                    padding-bottom: 0;
+                    text-decoration-color: white;
+                }
             }
-            F2 {
-                font-size: 10vw;
+        }
+        .body {
+            background: url(../img/bg.svg);
+            min-height: 70vh;
+            background-size: contain;
+            padding: 0;
+            padding-bottom: 5vh;
+            background: $blue;
+            z-index: 2;
+            -webkit-box-shadow: 0px 0px 12px 1px rgba(0, 0, 0, 0.3);
+            -moz-box-shadow: 0px 0px 12px 1px rgba(0, 0, 0, 0.3);
+            box-shadow: 0px 0px 12px 1px rgba(0, 0, 0, 0.3);
+            h2 {
+                color: white;
                 font-family: 'Sensations', serif;
-                text-decoration: underline;
-                padding-bottom: 0;
-                text-decoration-color: white;
+                font-size: 5vw;
+            }
+            .person {
+                cursor: pointer;
+                transition: all .3s ease;
+                color: $blue;
+                line-height: 7.5vh;
+                background: white;
+                margin-bottom: 1vh;
+                border-radius: 5px;
+                -webkit-box-shadow: 0px 0px 12px 1px rgba(0, 0, 0, 0);
+                -moz-box-shadow: 0px 0px 12px 1px rgba(0, 0, 0, 0);
+                box-shadow: 0px 0px 12px 1px rgba(0, 0, 0, 0);
+                .name {
+                    font-size: 20px;
+                }
+                .date {
+                    font-size: 22px;
+                    text-align: right;
+                }
+                &:hover {
+                    transform: scaleY(1.1) scaleX(1.025);
+                    -webkit-box-shadow: 0px 0px 12px 1px rgba(0, 0, 0, 0.3);
+                    -moz-box-shadow: 0px 0px 12px 1px rgba(0, 0, 0, 0.3);
+                    box-shadow: 0px 0px 12px 1px rgba(0, 0, 0, 0.3);
+                }
+            }
+        }
+        .flag {
+            z-index: 0;
+            display: block;
+            position: absolute;
+            bottom: 0vh;
+            background: transparent;
+            left: 0;
+            width: 8.33333vw;
+            $tempBlue: lighten($blue, 7.5%);
+            $tempHeight : 3vw;
+            border-left: solid $tempHeight transparent;
+            border-right: solid $tempHeight $tempBlue;
+            border-bottom: solid $tempHeight $tempBlue;
+            border-top: solid $tempHeight transparent;
+            &.right-flag {
+                right: 0;
+                left: inherit;
+                border-left: solid $tempHeight $tempBlue;
+                border-right: solid $tempHeight transparent;
+                border-bottom: solid $tempHeight $tempBlue;
+                border-top: solid $tempHeight transparent;
             }
         }
     }
-    .body {
-        background: url(../img/bg.svg);
-        height: 10000vh;
-        background-size: contain;
-        padding: 0;
+    .footer {
+        min-height: 20vh;
+        background: lighten($blue, 15%);
+        z-index: 2;
+        -webkit-box-shadow: 0px 0px 12px 1px rgba(0, 0, 0, 0.3);
+        -moz-box-shadow: 0px 0px 12px 1px rgba(0, 0, 0, 0.3);
+        box-shadow: 0px 0px 12px 1px rgba(0, 0, 0, 0.3);
+        .footer-logo {
+            background: url(../img/Logo-03.png);
+            background-size: contain;
+            height: 80%;
+            width: 35%;
+            left: 32.5%;
+            top: 10%;
+            position: absolute;
+            background-repeat: no-repeat;
+            transition: all .3s ease;
+            background-position: center;
+        }
     }
 }
