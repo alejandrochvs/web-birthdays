@@ -7,6 +7,8 @@
 html {
   background: white; }
 
+body::-webkit-scrollbar {
+  display: none; }
 body .section {
   padding: 0; }
   body .section .head {
@@ -21,7 +23,7 @@ body .section {
       background-position: center;
       background-size: contain;
       background-repeat: no-repeat;
-      height: 30vh;
+      height: 15.2vw;
       padding: 0; }
       body .section .head .corner.left-corner {
         background-position: left; }
@@ -32,12 +34,14 @@ body .section {
       white-space: nowrap;
       text-overflow: ellipsis;
       overflow: hidden;
-      height: 30vh;
-      line-height: 30vh;
+      height: auto;
+      line-height: 15.2vw;
       text-align: center;
       color: #2697a9;
       text-shadow: -2px 0px white;
-      font-size: 5vw; }
+      font-size: 4vw;
+      padding: 0;
+      margin-bottom: 3vh; }
       body .section .head .title .star {
         background: url(../img/star.svg);
         background-position: center;
@@ -50,47 +54,54 @@ body .section {
       body .section .head .title F1 {
         font-family: 'Frontage', sans-serif; }
       body .section .head .title F2 {
-        font-size: 10vw;
+        font-size: 9vw;
         font-family: 'Sensations', serif;
         text-decoration: underline;
         padding-bottom: 0;
         text-decoration-color: white; }
-  body .section .body {
-    background: url(../img/bg.svg);
-    min-height: 70vh;
-    background-size: contain;
-    padding: 0;
-    padding-bottom: 5vh;
+  body .section .body-background {
     background: #58d7d1;
-    z-index: 2;
+    padding: 0;
+    transition: all .3s ease;
     -webkit-box-shadow: 0px 0px 12px 1px rgba(0, 0, 0, 0.3);
     -moz-box-shadow: 0px 0px 12px 1px rgba(0, 0, 0, 0.3);
     box-shadow: 0px 0px 12px 1px rgba(0, 0, 0, 0.3); }
-    body .section .body h2 {
-      color: white;
-      font-family: 'Sensations', serif;
-      font-size: 5vw; }
-    body .section .body .person {
-      cursor: pointer;
-      transition: all .3s ease;
-      color: #58d7d1;
-      line-height: 7.5vh;
-      background: white;
-      margin-bottom: 1vh;
-      border-radius: 5px;
-      -webkit-box-shadow: 0px 0px 12px 1px rgba(0, 0, 0, 0);
-      -moz-box-shadow: 0px 0px 12px 1px rgba(0, 0, 0, 0);
-      box-shadow: 0px 0px 12px 1px rgba(0, 0, 0, 0); }
-      body .section .body .person .name {
-        font-size: 20px; }
-      body .section .body .person .date {
-        font-size: 22px;
-        text-align: right; }
-      body .section .body .person:hover {
-        transform: scaleY(1.1) scaleX(1.025);
-        -webkit-box-shadow: 0px 0px 12px 1px rgba(0, 0, 0, 0.3);
-        -moz-box-shadow: 0px 0px 12px 1px rgba(0, 0, 0, 0.3);
-        box-shadow: 0px 0px 12px 1px rgba(0, 0, 0, 0.3); }
+    body .section .body-background .body {
+      background: url(../img/bg.svg);
+      min-height: 70vh;
+      background-size: contain;
+      padding: 0;
+      padding-bottom: 5vh;
+      z-index: 2;
+      transition: all .3s ease; }
+      body .section .body-background .body h2 {
+        color: white;
+        font-family: 'Sensations', serif;
+        font-size: 7vw; }
+      body .section .body-background .body .person {
+        cursor: pointer;
+        transition: all .3s ease;
+        color: #58d7d1;
+        line-height: 7.5vh;
+        background: white;
+        margin-bottom: 1vh;
+        border-radius: 5px;
+        -webkit-box-shadow: 0px 0px 12px 1px rgba(0, 0, 0, 0);
+        -moz-box-shadow: 0px 0px 12px 1px rgba(0, 0, 0, 0);
+        box-shadow: 0px 0px 12px 1px rgba(0, 0, 0, 0); }
+        body .section .body-background .body .person .name {
+          font-size: 20px;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          overflow: hidden; }
+        body .section .body-background .body .person .date {
+          font-size: 22px;
+          text-align: right; }
+        body .section .body-background .body .person:hover {
+          transform: scaleY(1.1) scaleX(1.025);
+          -webkit-box-shadow: 0px 0px 12px 1px rgba(0, 0, 0, 0.3);
+          -moz-box-shadow: 0px 0px 12px 1px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 0px 12px 1px rgba(0, 0, 0, 0.3); }
   body .section .flag {
     z-index: 0;
     display: block;
@@ -128,5 +139,31 @@ body .footer {
     background-repeat: no-repeat;
     transition: all .3s ease;
     background-position: center; }
+
+@media (max-width: 767px) {
+  body .section .head .corner {
+    height: 25vw; }
+  body .section .head .title {
+    white-space: normal;
+    line-height: inherit;
+    height: auto;
+    padding: 5% 0;
+    margin-bottom: 0vh; }
+    body .section .head .title .star {
+      display: none; }
+    body .section .head .title f1 {
+      font-size: 10vw; }
+    body .section .head .title f2 {
+      font-size: 15vw; }
+  body .section .body-background .body h2 {
+    font-size: 15vw;
+    text-align: center; }
+  body .section .body-background .body .person .name {
+    padding: 0;
+    font-size: 4vw;
+    white-space: nowrap; }
+  body .section .body-background .body .person .date {
+    padding: 0;
+    font-size: 6vw; } }
 
 /*# sourceMappingURL=main.css.map */
