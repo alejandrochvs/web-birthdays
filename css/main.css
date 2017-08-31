@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:100,300,400,500");
 @font-face {
   font-family: 'Frontage';
   src: url("../fonts/Frontage W00 Bold.otf"); }
@@ -50,7 +51,8 @@ body .section {
         height: 10vh;
         width: 10vh;
         position: relative;
-        display: inline-block; }
+        display: inline-block;
+        top: 2vw; }
       body .section .head .title F1 {
         font-family: 'Frontage', sans-serif; }
       body .section .head .title F2 {
@@ -73,7 +75,8 @@ body .section {
       padding: 0;
       padding-bottom: 5vh;
       z-index: 2;
-      transition: all .3s ease; }
+      transition: all .3s ease;
+      font-family: 'Roboto', sans-serif; }
       body .section .body-background .body h2 {
         color: white;
         font-family: 'Sensations', serif;
@@ -96,7 +99,8 @@ body .section {
           overflow: hidden; }
         body .section .body-background .body .person .date {
           font-size: 22px;
-          text-align: right; }
+          text-align: right;
+          font-weight: 100; }
         body .section .body-background .body .person:hover {
           transform: scaleY(1.1) scaleX(1.025);
           -webkit-box-shadow: 0px 0px 12px 1px rgba(0, 0, 0, 0.3);

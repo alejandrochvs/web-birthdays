@@ -53,6 +53,7 @@ body {
                     width: 10vh;
                     position: relative;
                     display: inline-block;
+                    top: 2vw;
                 }
                 F1 {
                     font-family: 'Frontage', sans-serif;
@@ -81,6 +82,7 @@ body {
                 padding-bottom: 5vh;
                 z-index: 2;
                 transition: all .3s ease;
+                font-family: 'Roboto', sans-serif;
                 h2 {
                     color: white;
                     font-family: 'Sensations', serif;
@@ -106,6 +108,7 @@ body {
                     .date {
                         font-size: 22px;
                         text-align: right;
+                        font-weight: 100;
                     }
                     &:hover {
                         transform: scaleY(1.1) scaleX(1.025);
